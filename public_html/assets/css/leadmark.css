@@ -162,7 +162,7 @@ sup {
 }
 
 a {
-  color: #ff6e42;
+  color: #0CC0DF;
   text-decoration: none;
   background-color: transparent;
 }
@@ -11344,12 +11344,12 @@ textarea.form-control {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ff5a29;
+  background: #0CC0DF;
   border-radius: 20px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #ff6e42;
+  background: #0CC0DF;
 }
 
 .table.v-align-center th, .table.v-align-center td {
