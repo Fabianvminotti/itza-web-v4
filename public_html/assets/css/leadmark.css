@@ -50,6 +50,19 @@
   box-sizing: border-box;
 }
 
+
+.tagInicio{
+  background-color:#0CC0DF ;
+  font-size: 10pt ;
+  font-weight: bold;
+  display: inline-block;
+  color:var(--gray-dark);
+  padding: 4px;
+  margin: 3px;
+  border-radius: 5px;
+}
+
+
 html {
   font-family: sans-serif;
   line-height: 1.15;
@@ -11210,8 +11223,12 @@ textarea.form-control {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 100px;
+  bottom: 50px;
   margin: auto;
+}
+
+.Whatsapp{
+  animation: float 1s infinite;
 }
 
 .mouse-icon .wheel {
