@@ -36,6 +36,7 @@
         var divAGR = document.getElementById("ReplaceAgrimensura");
         var divAMB = document.getElementById("ReplaceAmbiental");
         var divMAIN = document.getElementById("ReplaceMain");
+        var divTopo = document.getElementById("ReplaceTopo");
 
         switch (landing) {
         case "1":
@@ -44,24 +45,35 @@
         divAGR.style.display = "none";
         divAMB.style.display = "none";
         divMAIN.style.display = "none";
+        divTopo.style.display = "none"
             break;
         case "2":
         divIRH.style.display = "none";
         divAGR.style.display = "flex";
         divAMB.style.display = "none";
         divMAIN.style.display = "none";
+        divTopo.style.display = "none"
             break;
         case "3":
         divIRH.style.display = "none";
         divAGR.style.display = "none";
         divAMB.style.display = "flex";
         divMAIN.style.display = "none";
+        divTopo.style.display = "none"
             break;  
+            case "4":
+        divIRH.style.display = "none";
+        divAGR.style.display = "none";
+        divAMB.style.display = "none";
+        divMAIN.style.display = "none";
+        divTopo.style.display = "flex"
+            break;
         default:
         divIRH.style.display = "none";
         divAGR.style.display = "none";
         divAMB.style.display = "none";
         divMAIN.style.display = "flex";
+        divTopo.style.display = "none"
         }
 }
 
@@ -145,7 +157,7 @@ path {
 
             <!-- MAIN PAGE -->
 <!-- <div id="ReplaceDiscipl" style="height: 65% !important;display: flex !important;flex-direction: column; justify-content: space-around;"></div> -->
-<div id="ReplaceMain" style="height: 65% !important;display: flex !important;flex-direction: column; justify-content: space-around;">
+<div id="ReplaceMain" style="height: 65% !important;display: none !important;flex-direction: column; justify-content: space-around;">
     <div style="min-height:150px ;display: flex !important;flex-direction: column; justify-content: center;"> 
 
        <!-- <h1 class="title" style="text-align: center;color:#0CC0DF !important; min-height: 75px; font-size: 100px !important;">ITZA</h1>   -->
@@ -187,15 +199,13 @@ path {
                     <div style="min-height:150px ;display: flex !important;flex-direction: column; justify-content: center;">
                         <!-- <h1 class="title" style="text-align: center;color:#0CC0DF !important; min-height: 75px; font-size: 100px !important;">ITZA</h1>   -->
                         <img src="assets/imgs/logo.png" alt="" style="width: 220px;text-align: center;margin:auto">
-                        <h1 class="subtitle" style="min-height: 25px; font-size: 25px !important;margin-left: 30px !important;margin-right: 30 px !important;">Agrimensura y Topografia</h1>
+                        <h1 class="subtitle" style="min-height: 25px; font-size: 25px !important;margin-left: 30px !important;margin-right: 30 px !important;">Agrimensura</h1>
                     </div>
                     <div style="padding: 30px;justify-items: center;text-align: center;text-align: center;">                    
                         <div class="tagInicio">Mensuras</div>
                         <div class="tagInicio">VEP y REP</div>
                         <div class="tagInicio">Amojonamientos</div>
-                        <div class="tagInicio">Relevamientos topograficos</div>
-                        <div class="tagInicio">Vuelos con drone</div>
-                        <div class="tagInicio">SIG</div>
+                        <div class="tagInicio">Posesiones</div>
                         <div class="tagInicio">Loteos</div>
 
 
@@ -219,6 +229,27 @@ Somos especialistas en  agrimensura y topografía con años de experiencia en el
         <div class="tagInicio">Tratamiento de efluentes</div>
         <div class="tagInicio">Gestion de Residuos</div>
         <div class="tagInicio">Habilitaciones ambientales</div>
+
+        <p style="max-width: 900px; text-justify:auto;margin-top: 20px;">
+            Somos especialistas en medio ambiente, brindamos soluciones rápidas e innovadoras para tu proyecto.</p>
+    </div>
+</div>
+
+
+<!-- TOPOGRAFIA  -->
+
+<div id="ReplaceTopo" style="height: 65% !important;display: none !important;flex-direction: column; justify-content: space-around;">
+    <div style="min-height:150px ;display: flex !important;flex-direction: column; justify-content: center;">
+        <!-- <h1 class="title" style="text-align: center;color:#0CC0DF !important; min-height: 75px; font-size: 100px !important;">ITZA</h1>   -->
+        <img src="assets/imgs/logo.png" alt="" style="width: 220px;text-align: center;margin:auto">
+        <h1 class="subtitle" style="min-height: 25px; font-size: 25px !important;">Topografía & SIGs</h1>
+    </div>
+    <div style="padding: 30px;justify-items: center;text-align: center;text-align: center;">                    
+        <div class="tagInicio">Relevamientos Topográficos</div>
+        <div class="tagInicio">Relevamientos con Drone</div>
+        <div class="tagInicio">Replanteos</div>
+        <div class="tagInicio">Imagenes Satelitales</div>
+        <div class="tagInicio">SIG</div>
 
         <p style="max-width: 900px; text-justify:auto;margin-top: 20px;">
             Somos especialistas en medio ambiente, brindamos soluciones rápidas e innovadoras para tu proyecto.</p>
