@@ -32,6 +32,8 @@
         var landing = parametros.landing
         console.log(landing);
 
+        var backImagen = document.getElementById("backImage");
+
         var divIRH = document.getElementById("ReplaceHidrica");
         var divAGR = document.getElementById("ReplaceAgrimensura");
         var divAMB = document.getElementById("ReplaceAmbiental");
@@ -40,12 +42,12 @@
 
         switch (landing) {
         case "1":
-        var divElement = document.getElementById("ReplaceHidrica");
         divIRH.style.display = "flex";
         divAGR.style.display = "none";
         divAMB.style.display = "none";
         divMAIN.style.display = "none";
         divTopo.style.display = "none"
+        backImagen.style.backgroundImage = "url('assets/imgs/back-irh.jpg')";
             break;
         case "2":
         divIRH.style.display = "none";
@@ -53,6 +55,8 @@
         divAMB.style.display = "none";
         divMAIN.style.display = "none";
         divTopo.style.display = "none"
+        backImagen.style.backgroundImage = "url('assets/imgs/back-agrim.jpg')";
+
             break;
         case "3":
         divIRH.style.display = "none";
@@ -60,6 +64,7 @@
         divAMB.style.display = "flex";
         divMAIN.style.display = "none";
         divTopo.style.display = "none"
+        backImagen.style.backgroundImage = "url('assets/imgs/back-amb.jpg')";
             break;  
             case "4":
         divIRH.style.display = "none";
@@ -67,6 +72,8 @@
         divAMB.style.display = "none";
         divMAIN.style.display = "none";
         divTopo.style.display = "flex"
+        backImagen.style.backgroundImage = "url('assets/imgs/back-topo.jpg')";
+
             break;
         default:
         divIRH.style.display = "none";
@@ -74,6 +81,7 @@
         divAMB.style.display = "none";
         divMAIN.style.display = "flex";
         divTopo.style.display = "none"
+        backImagen.style.backgroundImage = "url('assets/imgs/header.jpg')";
         }
 }
 
@@ -151,7 +159,7 @@ path {
     <!-- End Of Second Navigation -->
 
     <!-- Page Header -->
-    <header class="header">
+    <header class="header" id="backImage">
         <div class="overlay" style="display: flex !important;flex-direction: column; justify-content: center;">
 
 
