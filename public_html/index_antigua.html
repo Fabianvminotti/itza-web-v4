@@ -13,80 +13,13 @@
     <meta name="description" content="Start your development with LeadMark landing page.">
     <meta name="author" content="Devcrud">
     <script src="https://kit.fontawesome.com/808781cc1c.js" crossorigin="anonymous"></script>
-
-
     <script type="text/javascript">
-        function on_load(){
-
-        
-       var urlActual = window.location.href;
-
-        // Crea un objeto URL con la URL actual
-        var url = new URL(urlActual);
-
-        // Obtiene los parámetros de la URL como un objeto
-        var parametros = Object.fromEntries(url.searchParams.entries());
-
-        // Muestra los parámetros en la consola
-        console.log(parametros);
-        var landing = parametros.landing
-        console.log(landing);
-
-        var backImagen = document.getElementById("backImage");
-
-        var divIRH = document.getElementById("ReplaceHidrica");
-        var divAGR = document.getElementById("ReplaceAgrimensura");
-        var divAMB = document.getElementById("ReplaceAmbiental");
-        var divMAIN = document.getElementById("ReplaceMain");
-        var divTopo = document.getElementById("ReplaceTopo");
-
-        switch (landing) {
-        case "1":
-        divIRH.style.display = "flex";
-        divAGR.style.display = "none";
-        divAMB.style.display = "none";
-        divMAIN.style.display = "none";
-        divTopo.style.display = "none"
-        backImagen.style.backgroundImage = "url('assets/imgs/back-irh.jpg')";
-            break;
-        case "2":
-        divIRH.style.display = "none";
-        divAGR.style.display = "flex";
-        divAMB.style.display = "none";
-        divMAIN.style.display = "none";
-        divTopo.style.display = "none"
-        backImagen.style.backgroundImage = "url('assets/imgs/back-agrim.jpg')";
-
-            break;
-        case "3":
-        divIRH.style.display = "none";
-        divAGR.style.display = "none";
-        divAMB.style.display = "flex";
-        divMAIN.style.display = "none";
-        divTopo.style.display = "none"
-        backImagen.style.backgroundImage = "url('assets/imgs/back-amb.jpg')";
-            break;  
-            case "4":
-        divIRH.style.display = "none";
-        divAGR.style.display = "none";
-        divAMB.style.display = "none";
-        divMAIN.style.display = "none";
-        divTopo.style.display = "flex"
-        backImagen.style.backgroundImage = "url('assets/imgs/back-topo.jpg')";
-
-            break;
-        default:
-        divIRH.style.display = "none";
-        divAGR.style.display = "none";
-        divAMB.style.display = "none";
-        divMAIN.style.display = "flex";
-        divTopo.style.display = "none"
-        backImagen.style.backgroundImage = "url('assets/imgs/header.jpg')";
-        }
-}
-
+        document.addEventListener("DOMContentLoaded", function(){
+          if(window.location.pathname == "/hidricas"){
+            console.log("langosta");
+          }
+        });
     </script>
-
     
     <title>ITZA ingenieria</title>
     <!-- font icons -->
@@ -112,7 +45,7 @@ path {
 }
     </style>
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home" onload="on_load()">
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K4Q99W75"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -159,128 +92,69 @@ path {
     <!-- End Of Second Navigation -->
 
     <!-- Page Header -->
-    <header class="header" id="backImage">
-        <div class="overlay" style="display: flex !important;flex-direction: column; justify-content: center;">
-
-
-            <!-- MAIN PAGE -->
-<!-- <div id="ReplaceDiscipl" style="height: 65% !important;display: flex !important;flex-direction: column; justify-content: space-around;"></div> -->
-<div id="ReplaceMain" style="height: 65% !important;display: none !important;flex-direction: column; justify-content: space-around;">
-    <div style="min-height:150px ;display: flex !important;flex-direction: column; justify-content: center;"> 
-
-       <!-- <h1 class="title" style="text-align: center;color:#0CC0DF !important; min-height: 75px; font-size: 100px !important;">ITZA</h1>   -->
-       <img src="assets/imgs/logo.png" alt="" style="width: 220px;text-align: center;margin:auto">
-       <h2 class="subtitle" style="min-height: 25px; font-size: 25px !important;">Ingeniería </h2>
-   </div>
-   <div style="padding: 30px;justify-items: center;text-align: center;text-align: center;">                    
-       
-
-       <p class="subtitle"  style="max-width: 900px; text-justify:auto;margin-top: 20px;font-size: 17pt !important;">
-           Hacemos avanzar tu proyecto</p>
-   </div>
-</div>
-
-<!-- RECUROSOS HIDRICOS -->
-<!-- <div id="ReplaceDiscipl" style="height: 65% !important;display: flex !important;flex-direction: column; justify-content: space-around;"></div> -->
-                <div id="ReplaceHidrica" style="height: 65% !important;display: flex !important;flex-direction: column; justify-content: space-around;">
-                     <div style="min-height:150px ;display: flex !important;flex-direction: column; justify-content: center;"> 
-
-                        <!-- <h1 class="title" style="text-align: center;color:#0CC0DF !important; min-height: 75px; font-size: 100px !important;">ITZA</h1>   -->
-                        <img src="assets/imgs/logo.png" alt="" style="width: 220px;text-align: center;margin:auto">
-                        <h2 class="subtitle" style="min-height: 25px; font-size: 25px !important;">Ingeniería Hídrica</h2>
-                    </div>
-                    <div style="padding: 30px;justify-items: center;text-align: center;text-align: center;">                    
-                        <div class="tagInicio">Estudios Hidricos e Hidraulicos</div>
-                        <div class="tagInicio">Factibilidad Hidrica</div>
-                        <div class="tagInicio">Diseño de obras hidraulicas</div>
-                        <div class="tagInicio">Modelos matematicos</div>
-                        <div class="tagInicio">Riego y Drenaje Rural</div>
-
-                        <p style="max-width: 900px; text-justify:auto;margin-top: 20px;">
-                            Somos especialistas en recursos hídricos, brindamos soluciones rápidas e innovadoras para tu proyecto.</p>
-                    </div>
+    <header class="header">
+        <div class="overlay">
+            <h1 class="title" style="text-align: center;color:#0CC0DF ">ITZA</h1>  
+            <h1 class="subtitle">Ingeniería & Agrimensura</h1>
+            <form action="https://formspree.io/f/meqbnrvd" method='POST' style="margin: 20px !important;padding: 15px !important;">
+                <h4 style="opacity: .8 !important">
+                    Hacenos tu consulta!
+                </h4>
+                <h6 class="btn-primary" style="padding: 3px; border-radius: 5px; display: inline;margin-bottom: 10px !important;">
+                    Presupuestos sin cargo
+                </h6>
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" name='nombre' id="nombre" placeholder="nombre..." style="color:white" required>
                 </div>
-
-
-<!-- AGRIMENSURA  -->
-                <div id="ReplaceAgrimensura" style="height: 65% !important;display: none !important;flex-direction: column; justify-content: space-around;">
-                    <div style="min-height:150px ;display: flex !important;flex-direction: column; justify-content: center;">
-                        <!-- <h1 class="title" style="text-align: center;color:#0CC0DF !important; min-height: 75px; font-size: 100px !important;">ITZA</h1>   -->
-                        <img src="assets/imgs/logo.png" alt="" style="width: 220px;text-align: center;margin:auto">
-                        <h1 class="subtitle" style="min-height: 25px; font-size: 25px !important;margin-left: 30px !important;margin-right: 30 px !important;">Agrimensura</h1>
-                    </div>
-                    <div style="padding: 30px;justify-items: center;text-align: center;text-align: center;">                    
-                        <div class="tagInicio">Mensuras</div>
-                        <div class="tagInicio">VEP y REP</div>
-                        <div class="tagInicio">Amojonamientos</div>
-                        <div class="tagInicio">Posesiones</div>
-                        <div class="tagInicio">Loteos</div>
-
-
-                        <p style="max-width: 900px; text-justify:auto;margin-top: 20px;">                           
-Somos especialistas en  agrimensura y topografía con años de experiencia en el sector. Nuestro equipo ofrece soluciones rápidas y accesibles para potenciar sus proyectos.</p>
-                    </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" name='email' id="email" placeholder="email..." style="color:white" required>
                 </div>
-
-
-<!-- AMBIENTAL  -->
-
-<div id="ReplaceAmbiental" style="height: 65% !important;display: none !important;flex-direction: column; justify-content: space-around;">
-    <div style="min-height:150px ;display: flex !important;flex-direction: column; justify-content: center;">
-        <!-- <h1 class="title" style="text-align: center;color:#0CC0DF !important; min-height: 75px; font-size: 100px !important;">ITZA</h1>   -->
-        <img src="assets/imgs/logo.png" alt="" style="width: 220px;text-align: center;margin:auto">
-        <h1 class="subtitle" style="min-height: 25px; font-size: 25px !important;">Ingeniería Ambiental</h1>
-    </div>
-    <div style="padding: 30px;justify-items: center;text-align: center;text-align: center;">                    
-        <div class="tagInicio">Estudios de impacto ambiental (EsIA)</div>
-        <div class="tagInicio">Saneamiento Ambiental</div>
-        <div class="tagInicio">Tratamiento de efluentes</div>
-        <div class="tagInicio">Gestion de Residuos</div>
-        <div class="tagInicio">Habilitaciones ambientales</div>
-
-        <p style="max-width: 900px; text-justify:auto;margin-top: 20px;">
-            Somos especialistas en medio ambiente, brindamos soluciones rápidas e innovadoras para tu proyecto.</p>
-    </div>
-</div>
-
-
-<!-- TOPOGRAFIA  -->
-
-<div id="ReplaceTopo" style="height: 65% !important;display: none !important;flex-direction: column; justify-content: space-around;">
-    <div style="min-height:150px ;display: flex !important;flex-direction: column; justify-content: center;">
-        <!-- <h1 class="title" style="text-align: center;color:#0CC0DF !important; min-height: 75px; font-size: 100px !important;">ITZA</h1>   -->
-        <img src="assets/imgs/logo.png" alt="" style="width: 220px;text-align: center;margin:auto">
-        <h1 class="subtitle" style="min-height: 25px; font-size: 25px !important;">Topografía & SIGs</h1>
-    </div>
-    <div style="padding: 30px;justify-items: center;text-align: center;text-align: center;">                    
-        <div class="tagInicio">Relevamientos Topográficos</div>
-        <div class="tagInicio">Relevamientos con Drone</div>
-        <div class="tagInicio">Replanteos</div>
-        <div class="tagInicio">Imagenes Satelitales</div>
-        <div class="tagInicio">SIG</div>
-
-        <p style="max-width: 900px; text-justify:auto;margin-top: 20px;">
-            Somos especialistas en medio ambiente, brindamos soluciones rápidas e innovadoras para tu proyecto.</p>
-    </div>
-</div>
-
-
-<!-- Botonces de contancto  -->
-
-
-                <div>
-                <div style="display: flex !important; justify-content: center;">
-                    <h6> Presupuestos sin cargo</h6>                    
-                </div> 
-                <div style="display: flex !important; justify-content: center;">
-                    <a href="#contact"><div class="btn btn-info rounded w-md mt-3" > Contacto</div></a>
-                    <a href="https://api.whatsapp.com/send/?phone=5493435066172&text=Hola,%20me%20comunico%20para%20saber%20mas%20acerca%20de%20los%20servicios%20de%20ITZA" target="_blank"><div class="btn btn-success rounded w-md mt-3"> WhatsApp</div></a>
-                </div> 
+                <div class="form-group">
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="telefono">Telefono</label>
+                            </td>
+                            <td>
+                                <label for="lugar">De donde sos?</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" class="form-control" name='telefono' id="telefono" placeholder="Telefono..." style="color:white" required>
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" name='lugar' id="lugar" placeholder="Ciudad..." style="color:white" required>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                </div>              
+                <div class="form-group">
+                    <label for="exampleTextarea">Mensaje</label>
+                    <textarea class="form-control" name='mensaje' id="mensaje" rows="1" style="color:white" required></textarea>
                 </div>
-                      
-        </div>
-        
-       
+                <div class="form-group">
+                    <label for="exampleTextarea">Que servicio le interesa?</label>
+                    <select name="select">
+                        <option value="Mensura">Mensura / Agrimensura</option>
+                        <option value="Topografia" >Topografia</option>
+                        <option value="Hidraulica">Hidráulica / Hidrologia</option>
+                        <option value="Ambienal">Ambiental</option>
+                        <option value="Loteos">Loteos</option>
+                        <option value="Otro">Otro</option>
+                      </select>
+                </div>
+                <button class="btn btn-primary" type="submit">Enviar</button>
+            </form>
+        </div>  
+        <div >
+            <!-- <svg  viewBox="0 0 1500 200">
+                <path d="m 0,240 h 1500.4828 v -71.92164 c 0,0 -286.2763,-81.79324 -743.19024,-81.79324 C 300.37862,86.28512 0,168.07836 0,168.07836 Z"/>
+            </svg> -->
+        </div>  
         <div class="mouse-icon"><div class="wheel"></div></div>
     </header>
     <!-- End Of Page Header -->
@@ -397,7 +271,7 @@ Somos especialistas en  agrimensura y topografía con años de experiencia en el
         <div class="container">
             <h6 class="section-title text-center">Imagenes</h6>
             <h6 class="section-subtitle mb-5 text-center">Algunas postales de nuestro trabajo</h6>
-            <div class="filters" style="display:flex; flex-wrap:wrap" >
+            <div class="filters" >
                 <a href="#" data-filter=".topo" class="active" >
                     Topografia
                 </a>
@@ -867,25 +741,24 @@ Somos especialistas en  agrimensura y topografía con años de experiencia en el
                     <p></p>
                 </div>
                 <div class="col-md-7">
-                    <form action="https://formspree.io/f/mpzvzkwn" method='POST'>
+                    <form>
                         <h4 class="mb-4">Envianos un mensaje</h4>
                         <div class="form-row">
                             <div class="form-group col-sm-4">
-                                <input type="text" class="form-control text-white rounded-0 bg-transparent" name="name" placeholder="Nombre" required>
+                                <input type="text" class="form-control text-white rounded-0 bg-transparent" name="name" placeholder="Nombre">
                             </div>
                             <div class="form-group col-sm-4">
-                                <input type="text" class="form-control text-white rounded-0 bg-transparent" name="telefono" placeholder="Telefono" required>
+                                <input type="email" class="form-control text-white rounded-0 bg-transparent" name="Email" placeholder="Email">
                             </div>
                             <div class="form-group col-sm-4">
-                                <input type="text" class="form-control text-white rounded-0 bg-transparent" name="Lugar" placeholder="Lugar" required>
+                                <input type="text" class="form-control text-white rounded-0 bg-transparent" name="subject" placeholder="Asunto">
                             </div>
                             <div class="form-group col-12">
-                                <textarea name="message" id="" cols="30" rows="4" class="form-control text-white rounded-0 bg-transparent" placeholder="Mensaje" required></textarea>
+                                <textarea name="message" id="" cols="30" rows="4" class="form-control text-white rounded-0 bg-transparent" placeholder="Mensaje"></textarea>
 
                             </div>
                             <div class="form-group col-12 mb-0">
-                                <button type="submit" class="btn btn-info rounded w-md mt-3" >Enviar</button>
-                                <a href="https://api.whatsapp.com/send/?phone=5493435066172&text=Hola,%20me%20comunico%20para%20saber%20mas%20acerca%20de%20los%20servicios%20de%20ITZA"  target="_blank"><div  class="btn btn-success rounded w-md mt-3" >WhatsApp</div></a>
+                                <button type="submit" class="btn btn-info rounded w-md mt-3" disabled>Enviar</button>
                             </div>                          
                         </div>                          
                     </form>
@@ -898,7 +771,7 @@ Somos especialistas en  agrimensura y topografía con años de experiencia en el
             <!-- End of Page Footer -->  
         </div>
     </section>
-	<div id="whatsapp" class="Whatsapp">
+	<div id="whatsapp">
         <a href="https://api.whatsapp.com/send/?phone=5493435066172&text=Hola,%20me%20comunico%20para%20saber%20mas%20acerca%20de%20los%20servicios%20de%20ITZA" target="_blank">
           <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="whatsapp" class="svg-inline--fa fa-whatsapp fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path></svg>
         </a>
