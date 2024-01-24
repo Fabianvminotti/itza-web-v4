@@ -642,6 +642,12 @@ pre code {
   padding-left: 15px;
 }
 
+
+
+.img-detail {
+  width: 100%;
+}
+
 .col {
   -webkit-flex-basis: 0;
       -ms-flex-preferred-size: 0;
@@ -11520,11 +11526,11 @@ textarea.form-control {
 }
 
 .header .overlay .subtitle {
-  font-size: calc(10px + (18 - 13) * ((100vw - 320px) / (1200 - 320)));
+  font-size: calc(15px + (18 - 13) * ((100vw - 320px) / (1200 - 320)));
   font-weight: 600;
   margin-bottom: 0;
   letter-spacing: 3px;
-  word-spacing: 10px;
+  word-spacing: 0px;
   text-align: center;
   color:white !important
 }
