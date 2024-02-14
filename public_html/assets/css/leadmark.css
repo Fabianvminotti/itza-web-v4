@@ -82,7 +82,7 @@ body {
   line-height: 1.5;
   color: #444;
   text-align: left;
-  background-color: #fff;
+  background-color: #f5f8fc;
 }
 
 [tabindex="-1"]:focus {
@@ -2973,13 +2973,13 @@ fieldset:disabled a.btn {
 }
 
 .btn-info {
-  color: #fff;
+  color: #fff !important;
   background-color: #1289A7;
   border-color: #1289A7;
 }
 
 .btn-info:hover {
-  color: #fff;
+  color: #fff !important;
   background-color: #0e6d84;
   border-color: #0d6379;
 }
@@ -11696,7 +11696,7 @@ textarea.form-control {
 }
 
 .section {
-  padding: 80px 0;
+  padding: 30px 0;
 }
 
 .section:nth-child(even) {
