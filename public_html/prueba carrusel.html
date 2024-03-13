@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carrusel Responsivo de Experiencias</title>
+<style>
+.experiencias-carrusel-contenedor {
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+}
+
+.experiencias-carrusel-slide {
+  display: flex;
+}
+
+.experiencias-imagen-carrusel {
+  flex-shrink: 0;
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.experiencias-contenido {
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 10%, rgba(0,0,0,0) 100%);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+.experiencias-prev, .experiencias-next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  user-select: none;
+  background-color: rgba(0,0,0,0.5);
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.5);
+}
+
+.experiencias-next {
+  right: 0;
+}
+
+.experiencias-prev:hover, .experiencias-next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.experiencias-indicadores {
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  top: -50px;
+}
+
+.experiencias-indicador {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 10px;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease, transform 0.3s ease;
+}
+
+.experiencias-indicador.activo {
+  background-color: #fff;
+  transform: scale(1.5);
+}
+</style>
+</head>
+<body>
+
+<div class="experiencias-carrusel-contenedor" style="max-width: 1110px; margin: auto;">
+  <div class="experiencias-carrusel-slide">
+    <div class="experiencias-imagen-carrusel" style="background-image: url('assets/imgs/riego.jpg');">
+      <div class="experiencias-contenido">
+        <h2>Título 1</h2>
+        <p>Descripción de la imagen 1.</p>
+      </div>
+    </div>
+    <div class="experiencias-imagen-carrusel" style="background-image: url('assets/imgs/nacho.png');">
+      <div class="experiencias-contenido">
+        <h2>Título 2</h2>
+        <p>Descripción de la imagen 2.</p>
+      </div>
+    </div>
+    <div class="experiencias-imagen-carrusel" style="background-image: url('assets/imgs/galery/alc.PNG');">
+      <div class="experiencias-contenido">
+        <h2>Título 3</h2>
+        <p>Descripción de la imagen 3.</p>
+      </div>
+    </div>
+  </div>
+  <a class="experiencias-prev" onclick="cambiarSlides(-1)">&#10094;</a>
+  <a class="experiencias-next" onclick="cambiarSlides(1)">&#10095;</a>
+</div>
+<div class="experiencias-indicadores"></div>
+
+<script>
+let indiceActual = 0;
+let posicionInicial, posicionFinal;
+
+document.addEventListener("DOMContentLoaded", function() {
+  mostrarSlides(indiceActual);
+  crearIndicadores();
+  let slides = document.querySelector('.experiencias-carrusel-contenedor');
+  slides.addEventListener('touchstart', toqueInicio, false);
+  slides.addEventListener('touchmove', toqueMover, false);
+  slides.addEventListener('touchend', toqueFin, false);
+});
+
+function cambiarSlides(n) {
+  mostrarSlides(indiceActual += n);
+}
+
+function mostrarSlides(n) {
+  let i;
+  const slides = document.querySelectorAll('.experiencias-imagen-carrusel');
+  const indicadores = document.querySelectorAll('.experiencias-indicador');
+  if (n > slides.length - 1) {indiceActual = 0}
+  if (n < 0) {indiceActual = slides.length - 1}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < indicadores.length; i++) {
+      indicadores[i].className = indicadores[i].className.replace(" activo", "");
+  }
+  slides[indiceActual].style.display = "block";  
+  indicadores[indiceActual].className += " activo";
+}
+
+function crearIndicadores() {
+  const slideCount = document.querySelectorAll('.experiencias-imagen-carrusel').length;
+  const indicadoresContenedor = document.querySelector('.experiencias-indicadores');
+  
+  for (let i = 0; i < slideCount; i++) {
+    const indicador = document.createElement('span');
+    indicador.classList.add('experiencias-indicador');
+    if (i === 0) indicador.classList.add('activo');
+    indicador.addEventListener('click', (function(index) {
+      return function() {
+        mostrarSlides(indiceActual = index);
+      }
+    })(i));
+    indicadoresContenedor.appendChild(indicador);
+  }
+}
+
+function toqueInicio(e) {
+  posicionInicial = e.touches[0].clientX;
+}
+
+function toqueMover(e) {
+  if (!posicionInicial) {
+    return;
+  }
+
+  posicionFinal = e.touches[0].clientX;
+  let diferencia = posicionInicial - posicionFinal;
+
+  if (diferencia > 0) {
+    cambiarSlides(1);
+  } else {
+    cambiarSlides(-1);
+  }
+  posicionInicial = null; // Reinicia la posición inicial para el próximo deslizamiento
+}
+
+function toqueFin(e) {
+  if (posicionFinal) {
+    // Completa el deslizamiento si es necesario
+    let diferencia = posicionInicial - posicionFinal;
+    if (diferencia > 50) {
+      cambiarSlides(1);
+    } else if (diferencia < -50) {
+      cambiarSlides(-1);
+    }
+  }
+  posicionInicial = null;
+  posicionFinal = null;
+}
+</script>
+
+</body>
+</html>
