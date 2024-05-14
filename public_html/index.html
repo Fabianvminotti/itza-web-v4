@@ -46,11 +46,13 @@
         var divAMB = document.getElementById("ReplaceAmbiental");
         var divMAIN = document.getElementById("ReplaceMain");
         var divTopo = document.getElementById("ReplaceTopo");
+        var divCivil = document.getElementById("ReplaceCivil");
 
         var servIRH  = document.getElementById("serv-irh")
         var servAMB = document.getElementById("serv-amb")
         var servTOPO = document.getElementById("serv-topo")
         var servAGR = document.getElementById("serv-agr")
+        var servCIVIL = document.getElementById("serv-civil")
 
         switch (landing) {
         case "1":
@@ -59,12 +61,14 @@
         divAMB.style.display = "none";
         divMAIN.style.display = "none";
         divTopo.style.display = "none"
+        divCivil.style.display = "none"
         backImagen.style.backgroundImage = "url('assets/imgs/IRH-back.jpg')";
 
         servIRH.style.display = "block";
         servAMB.style.display = "none";
         servAGR.style.display = "none";
         servTOPO.style.display = "none";
+        servCIVIL.style.display = "none"
 
             break;
         case "2":
@@ -73,12 +77,14 @@
         divAMB.style.display = "none";
         divMAIN.style.display = "none";
         divTopo.style.display = "none"
+        divCivil.style.display = "none"
         backImagen.style.backgroundImage = "url('assets/imgs/photo1699647859.jpeg')";
 
         servIRH.style.display = "none";
         servAMB.style.display = "none";
         servAGR.style.display = "block";
         servTOPO.style.display = "none";
+        servCIVIL.style.display = "none"
             break;
         case "3":
         divIRH.style.display = "none";
@@ -86,12 +92,14 @@
         divAMB.style.display = "flex";
         divMAIN.style.display = "none";
         divTopo.style.display = "none"
+        divCivil.style.display = "none"
         backImagen.style.backgroundImage = "url('assets/imgs/back-amb.jpg')";
 
         servIRH.style.display = "none";
         servAMB.style.display = "block";
         servAGR.style.display = "none";
         servTOPO.style.display = "none";
+        servCIVIL.style.display = "none"
             break;  
             case "4":
         divIRH.style.display = "none";
@@ -99,12 +107,31 @@
         divAMB.style.display = "none";
         divMAIN.style.display = "none";
         divTopo.style.display = "flex"
+        divCivil.style.display = "none"
         backImagen.style.backgroundImage = "url('assets/imgs/photo1697901809.jpeg')";
 
         servIRH.style.display = "none";
         servAMB.style.display = "none";
         servAGR.style.display = "none";
         servTOPO.style.display = "block";
+        servCIVIL.style.display = "none"
+
+            case "5":
+        divIRH.style.display = "none";
+        divAGR.style.display = "none";
+        divAMB.style.display = "none";
+        divMAIN.style.display = "none";
+        divTopo.style.display = "none"
+        divCivil.style.display = "flex"
+        backImagen.style.backgroundImage = "url('assets/imgs/fondocivil.jpeg')";
+
+        servIRH.style.display = "none";
+        servAMB.style.display = "none";
+        servAGR.style.display = "none";
+        servTOPO.style.display = "none";
+        servCIVIL.style.display = "block"
+
+
             break;
         default:
         divIRH.style.display = "none";
@@ -118,6 +145,7 @@
         servAMB.style.display = "none";
         servAGR.style.display = "none";
         servTOPO.style.display = "none";
+        servCIVIL.style.display = "none"
         }
 }
 
@@ -198,7 +226,7 @@ path {
                         <a class="nav-link" href="#contact">Contactos</a>
                     </li>
                     <li class="nav-item">
-                        <a href="https://drive.google.com/file/d/13UDuRN5ogLcjHKbOkIQRQIvOkficYBgY/view?usp=share_link" target="_blank" class="ml-4 nav-link btn btn-info btn-sm rounded" style="color:white !important">Catálogo</a>
+                        <a href="https://drive.google.com/file/d/1Dt3hCMWlddrPRJp8jT4GQT-iEAwe3zBL/view?usp=sharing" target="_blank" class="ml-4 nav-link btn btn-info btn-sm rounded" style="color:white !important">Catálogo</a>
                     </li>
                 </ul>
             </div>
@@ -291,6 +319,27 @@ path {
             <span class="tagInicio">Sistemas de Gestión Ambiental</span>
             <span class="tagInicio">Gestión de residuos</span>
             <span class="tagInicio">Inscripciones ambientales</span></p>
+    </div>
+</div>
+
+
+<!-- CIVIL  -->
+
+<div id="ReplaceCivil" style="height: 50% !important;display: flex !important;flex-direction: column; justify-content: center;">
+    <div style="min-height:150px ;display: flex !important;flex-direction: column; justify-content: center;">
+        <!-- <h1 class="title" style="text-align: center;color:#0CC0DF !important; min-height: 75px; font-size: 100px !important;">ITZA</h1>   -->
+        <h1 class="subtitle" style="min-height: 30px; font-size: 30px !important;">Ingeniería Civil</h1>
+    </div>
+    <div style="padding: 30px;justify-items: center;text-align: center;text-align: center;">                    
+     
+        <!-- <div style="color: lightcyan;">Responsable del área:</div> -->
+        <div style="font-weight: bolder !important;color: #38B6FF;">Ing. Ignacio Millesimo</div>
+        <p style="max-width: 900px; text-justify:auto;margin-top: 20px;">
+
+            <span class="tagInicio">Cálculo estructural</span>
+            <span class="tagInicio">Diseño Vial</span>
+            <span class="tagInicio">Pliegos Licitatorios</span>
+            <span class="tagInicio">Gestión de Proyectos</span>
     </div>
 </div>
 
@@ -559,6 +608,49 @@ Promovemos la correcta gestión de los purines y los restos orgánicos para su a
                 </div>
             </div>
         </div>  
+
+
+
+        <div id="serv-civil">
+            <div id="two" class="wrapper">
+                <div class="inner alt">
+                    <section class="spotlight">
+                        <div class="image"><img src="assets/imgs/estructuras.jpg" alt="" /></div>
+                        <div class="content">
+                            <h3>Diseño y Cálculo Estructural</h3>
+                            <p>
+                                Diseño estructural es clave para seguridad y economía en construcción. Ofrecemos proyectos ajustados, cumpliendo reglamentos, con documentación técnica completa.</p>
+                        </div>
+                    </section>
+                    <section class="spotlight">
+                        <div class="image"><img src="assets/imgs/vial.jpg" alt="" /></div>
+                        <div class="content">
+                            <h3>Proyectos viales</h3>
+                            <p>Nos especializamos en diseñar caminos y vías de comunicacion para mejorar la infraestructura de transporte. Ofrecemos proyectos viales integrales, considerando los últimos paradigmas urbanos.</p>
+                        </div>
+                    </section>
+                    <section class="spotlight">
+                        <div class="image"><img src="assets/imgs/gestionproyectos.png" alt="" /></div>
+                        <div class="content">
+                            <h3>Gestión de proyectos</h3>
+                            <p>
+                                Planificación, coordinación de recursos y control para la ejecución proyectos de construcción eficientemente, cumpliendo objetivos, plazos, presupuestos y estándares de calidad y seguridad.</p>
+                        </div>
+                    </section>
+                    <section class="spotlight">
+                        <div class="image"><img src="assets/imgs/documentacion.jpg" alt="" /></div>
+                        <div class="content">
+                            <h3>Elaboración de Pliegos Licitatorios</h3>
+                            <p>
+                                En ITZA, proporcionamos documentación técnica integral para proyectos de ingeniería, esencial para licitaciones y gestión de financiamientos, incluyendo pliegos, cómputos, redeterminaciones y más.</p>
+                        </div>
+                    </section>
+                    
+                    
+                </div>
+            </div>
+        </div>  
+      
       
         </div>
     </section>
