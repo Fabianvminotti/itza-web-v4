@@ -11846,6 +11846,11 @@ textarea.form-control {
   color: #fff;
 }
 
+
+.portfolio-section .portfolio-container .active {
+  display: block !important; /* Muestra la categoría 'topo' por defecto */
+}
+
 .portfolio-section .portfolio-container .portfolio-item {
   position: relative;
   padding-left: 0;
